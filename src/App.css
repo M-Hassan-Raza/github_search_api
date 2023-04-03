@@ -60,6 +60,7 @@ background: radial-gradient(circle, rgba(231,216,223,1) 0%, rgba(100,109,119,1) 
   border: none;
   border-radius: 5px;
   font-size: 20px;
+  width: 450px;
   
 }
 
@@ -77,6 +78,7 @@ background: radial-gradient(circle, rgba(231,216,223,1) 0%, rgba(100,109,119,1) 
   background-color: white;
   font-size: 20px;
   cursor: pointer;
+  width: 120px;
 }
 
 #submit-btn:hover{
@@ -105,7 +107,7 @@ background: radial-gradient(circle, rgba(231,216,223,1) 0%, rgba(100,109,119,1) 
   padding: 20px;
   border-radius: 10px;
   margin: 25px;
-  width: 500px;
+  width: 570px;
 }
 
 a{
