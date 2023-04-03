@@ -9,7 +9,12 @@ function App() {
 
   return (
     <div className="App">
-      <Form  />
+      <Form 
+        searchUser={searchUser} 
+        setSearchUser={setSearchUser}
+        resultUsers={resultUsers}
+        setResultUsers={setResultUsers}
+      />
     </div>
   );
 }
