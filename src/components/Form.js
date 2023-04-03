@@ -1,11 +1,11 @@
 import React from 'react'
 import axios from 'axios';
-import User from './User';
+import User from './User'
 
 const Form = (props) => {
     const handleSearch = async (e) => {
         e.preventDefault();
-        const response = await axios.get('https://api.github.com/search/users?q=${searchTerm}');
+        const response = await axios.get(`https://api.github.com/search/users?q=${props.searchUser}`);
         props.setResultUsers(response.data.items);
     };
 
@@ -15,17 +15,15 @@ const Form = (props) => {
     };
     return (
         <div>
-            <form onSubmit={handleSearch}>
-                <label>Search a GitHub Search:
-                    <input type="text" value={props.searchUser} onChange={searchStateHandler}></input>
-                </label>
-                <button type="submit">Search</button>
+            <form id="myForm" onSubmit={handleSearch}>
+                <input type="text" placeholder='Enter any Username' value={props.searchUser} onChange={searchStateHandler}></input>
+                <button id="submit-btn" type="submit">Search</button>
             </form>
-            {props.resultUsers.map((user) => (
-                
-                <User />
-
-            ))}
+            <div class="result-users">
+                {props.resultUsers.map((user) => (
+                    <User user={user} />
+                ))}
+            </div>
         </div>
     )
 }
