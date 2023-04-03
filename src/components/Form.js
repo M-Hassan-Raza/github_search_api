@@ -15,7 +15,6 @@ const Form = (props) => {
     };
     return (
         <div>
-            <h1 class="form-title"></h1>
             <form id="myForm" onSubmit={handleSearch}>
                 <input type="text" placeholder='Enter any Username' value={props.searchUser} onChange={searchStateHandler}></input>
                 <button id="submit-btn" type="submit">Search</button>
