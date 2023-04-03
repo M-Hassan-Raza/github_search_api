@@ -1,9 +1,12 @@
 import React from 'react'
 
 const User = (props) => {
+
+    //This code is to Split the username form the compelte URL
     const username = props.user.html_url;
     var index = username.lastIndexOf('/');
     var newUsername = username.substring(index + 1);
+
     return (
         <div id="user-div" key={props.user.id}>
             <h1><a href={props.user.html_url}>{newUsername}</a></h1>

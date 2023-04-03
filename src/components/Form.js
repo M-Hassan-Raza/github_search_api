@@ -4,6 +4,7 @@ import User from './User'
 
 const Form = (props) => {
     const handleSearch = async (e) => {
+        //This code prevents the apge from reloading everytime teh event occurs
         e.preventDefault();
         const response = await axios.get(`https://api.github.com/search/users?q=${props.searchUser}`);
         props.setResultUsers(response.data.items);
@@ -11,6 +12,7 @@ const Form = (props) => {
 
     const searchStateHandler = (e) => {
         e.preventDefault();
+        //Set the state to ensure proper re-rendering of the UI
         props.setSearchUser(e.target.value);
     };
     return (
